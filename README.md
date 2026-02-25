@@ -62,21 +62,29 @@ Fills a buffer with secure random bytes. Returns `SEC_SUCCESS` (0) on success.
 
 ### Memory Utilities
 
-`void sec_mem_wipe(void *ptr, size_t len)`
+```c
+void sec_mem_wipe(void *ptr, size_t len)
+```
 
 Securely erases memory. Use this for keys and passwords before they go out of scope.
 
-`int sec_mem_equal(const void *a, const void *b, size_t len)`
+```c
+int sec_mem_equal(const void *a, const void *b, size_t len)
+```
 
 Compares two memory blocks in constant time. Returns `1` if equal, `0` if not.
 
-`int sec_mem_lock(void *ptr, size_t len)`
+```c
+int sec_mem_lock(void *ptr, size_t len)
+```
 
 Locks a memory range into RAM, preventing it from being written to the swap file/disk.
 
 ### User Input
 
-`int sec_input_password(char* password, const char *prompt, size_t max_len)`
+```c
+int sec_input_password(char* password, const char *prompt, size_t max_len)
+```
 
 Prompts for a password. Masks input with `*`.
 
@@ -88,7 +96,7 @@ Prompts for a password. Masks input with `*`.
 
 ```c
 #include "secure_util.h"
-#include "passinput.h"
+#include "password_input.h"
 #include <stdio.h>
 
 int main() {

@@ -1,5 +1,5 @@
 #include "secure_util.h"
-#include "passinput.h"
+#include "password_input.h"
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>

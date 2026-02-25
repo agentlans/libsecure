@@ -1,5 +1,5 @@
 #include "secure_util.h" /* Now provides sec_mem_wipe, sec_status_t, etc. */
-#include "passinput.h"
+#include "password_input.h"
 
 #include <stdio.h>
 #include <stdlib.h>
